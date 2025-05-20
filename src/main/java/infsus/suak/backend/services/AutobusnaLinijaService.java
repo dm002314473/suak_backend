@@ -72,8 +72,8 @@ public class AutobusnaLinijaService {
         Autobus autobus = autobusOpt.get();
         Peron peron = peronOpt.get();
 
-        if (autobus.getSirina() != null && peron.getVisina() != null) {
-            if (autobus.getSirina().compareTo(peron.getVisina()) > 0) {
+        if (autobus.getVisina() != null && peron.getVisina() != null) {
+            if (autobus.getVisina().compareTo(peron.getVisina()) > 0) {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
         }
@@ -112,8 +112,8 @@ public class AutobusnaLinijaService {
         Peron peron = peronOpt.get();
         Odrediste odrediste = odredisteOpt.get();
 
-        if (autobus.getSirina() != null && peron.getVisina() != null) {
-            if (autobus.getSirina().compareTo(peron.getVisina()) > 0) {
+        if (autobus.getVisina() != null && peron.getVisina() != null) {
+            if (autobus.getVisina().compareTo(peron.getVisina()) > 0) {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
         }

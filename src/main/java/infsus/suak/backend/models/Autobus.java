@@ -22,17 +22,13 @@ public class Autobus {
     private String model;
 
     @Column(precision = 5, scale = 2)
-    private BigDecimal duljina;
+    private BigDecimal visina;
 
-    @Column(precision = 5, scale = 2)
-    private BigDecimal sirina;
-
-    public Autobus(Integer autobusId, Integer brojSjedala, String model, BigDecimal duljina, BigDecimal sirina) {
+    public Autobus(Integer autobusId, Integer brojSjedala, String model, BigDecimal visina) {
         this.autobusId = autobusId;
         this.brojSjedala = brojSjedala;
         this.model = model;
-        this.duljina = duljina;
-        this.sirina = sirina;
+        this.visina = visina;
     }
 
     public Autobus() {
@@ -62,19 +58,11 @@ public class Autobus {
         this.model = model;
     }
 
-    public BigDecimal getDuljina() {
-        return duljina;
+    public BigDecimal getVisina() {
+        return visina;
     }
 
-    public void setDuljina(BigDecimal duljina) {
-        this.duljina = duljina;
-    }
-
-    public BigDecimal getSirina() {
-        return sirina;
-    }
-
-    public void setSirina(BigDecimal sirina) {
-        this.sirina = sirina;
+    public void setVisina(BigDecimal visina) {
+        this.visina = visina;
     }
 }
