@@ -1,6 +1,7 @@
 package infsus.suak.backend.controllers;
 
 import infsus.suak.backend.dtos.AutobusnaLinijaDTO;
+import infsus.suak.backend.dtos.NovaAutobusnaLinijaDTO;
 import infsus.suak.backend.dtos.PutnikDTO;
 import infsus.suak.backend.services.AutobusnaLinijaService;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +31,7 @@ public class AutobusnaLinijaController {
     }
 
     @PostMapping
-    public ResponseEntity<AutobusnaLinijaDTO> createLinija(@RequestBody AutobusnaLinijaDTO dto) {
+    public ResponseEntity<AutobusnaLinijaDTO> createLinija(@RequestBody NovaAutobusnaLinijaDTO dto) {
         return autobusnaLinijaService.createLinija(dto);
     }
 

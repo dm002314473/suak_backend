@@ -1,6 +1,7 @@
 package infsus.suak.backend.services;
 
 import infsus.suak.backend.dtos.AutobusnaLinijaDTO;
+import infsus.suak.backend.dtos.NovaAutobusnaLinijaDTO;
 import infsus.suak.backend.dtos.PutnikDTO;
 import infsus.suak.backend.mappers.AutobusnaLinijaMapper;
 import infsus.suak.backend.mappers.PutnikMapper;
@@ -54,7 +55,7 @@ public class AutobusnaLinijaService {
         return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
-    public ResponseEntity<AutobusnaLinijaDTO> createLinija(AutobusnaLinijaDTO dto) {
+    public ResponseEntity<AutobusnaLinijaDTO> createLinija(NovaAutobusnaLinijaDTO dto) {
         AutobusnaLinija linija = new AutobusnaLinija();
 
         linija.setVrijemeDolaska(LocalTime.parse(dto.getVrijemeDolaska()));

@@ -3,10 +3,7 @@ package infsus.suak.backend.controllers;
 import infsus.suak.backend.dtos.PutnikDTO;
 import infsus.suak.backend.services.PutnikService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,5 +21,10 @@ public class PutnikController {
     @GetMapping
     public ResponseEntity<List<PutnikDTO>> getSvePutnike() {
         return putnikService.getSvePutnike();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<PutnikDTO> getPutnik(@PathVariable Integer id) {
+        return putnikService.getPutnik(id);
     }
 }
